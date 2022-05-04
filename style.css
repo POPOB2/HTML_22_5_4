@@ -6,46 +6,67 @@
     /* 頁面初始化 避免不同瀏覽器 不同的設定 導致的邊框留白*/
     margin: 0;
 }
-header{
-    height: 100vh;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+h1{
+    color: red; /*桌機尺寸*/
 }
-
-
-/* --------------------桌機版------------------ */
-header{
+.header{
     width: 100%;
     /* padding:用於圖片使圖片高度出來  */
     padding: 80px 0;
-    background-image: url('http://picsum.photos/id/1033/1200/1000');
+    background-image: url(./img/alishan-2136879_960_720.jpg);
     /* 置中 */
     background-size: cover;
-
     color: white;
     text-align: center;
     text-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+    margin-bottom: 2rem;
+    font-size: 50px;
+    /* 僅背景滾動模式 */
+    background-attachment: fixed;
+}
+.header>p{
+    font-size: 30px;
 }
 .row {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: space-around;
 }
 
 .col {
-    border: 1px solid black;
-    flex-basis: calc(100% / 3);
+    
+
+    border: 3px solid lightblue;
+    /* flex-basis: calc(100% / 3); */
+    width: 500px;
+    height: 500px;
+    padding: 5px;
+    box-shadow: 5px 5px rgba(0,0,0,0.5);
+    margin: 10px ;
+}
+
+.col>h3{
+    border-left:10px solid lightslategrey ;
+    padding-left: 10px ;
+}
+
+.col>img{
+    width: 100%;
+    margin: 10px auto;
+    
+}
+.col:hover{
+    box-shadow: 10px 10px rgba(0,0,0,0.5);
+    text-decoration: underline;
 }
 
 /* --------------------手機版------------------ */
-@media(min-width:576px){
+@media (max-width:576px){
 
     .row {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        /* justify-content: space-around; */
         height: 80vh;
     }
 
@@ -68,10 +89,20 @@ header{
     h1 {
         color: blue;
     }
+   
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        /* height: 80vh; */
+    }
+   
+    .col{
+        flex-basis: 100%;
+        width: 70vh;
+        margin-bottom: 10px;
+    }
+
 }
-.col {
-    flex-basis: 50%;
-}
+
 /* -------------------------------------------- */
-
-

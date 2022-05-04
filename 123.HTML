@@ -1,0 +1,37 @@
+
+/* --------------------手機版------------------ */
+@media(min-width:576px){
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+        height: 80vh;
+    }
+
+    .col {
+        /* flex-basis: 100vh; */
+        width: calc(100% / 3); 
+        /* flex-basis: 100%; */
+        /* margin: 10px; */
+        /* width: 100%; */
+        /* margin-bottom: 10px; */
+        /* width: 100%; */
+    }
+
+    h1 {
+        color: green;
+    }
+}
+/* --------------------平板版------------------ */
+@media (min-width:577px) and (max-width:991px) {
+    h1 {
+        color: blue;
+    }
+}
+.col {
+    flex-basis: 50%;
+}
+/* -------------------------------------------- */
+
+
