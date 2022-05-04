@@ -1,0 +1,77 @@
+* {
+    /* 未用border-box時會有1px導致區塊被換行 */
+    /* borderbox是把外線向內成為方塊的一部分
+    ,所以沒有margin */
+    box-sizing: border-box;
+    /* 頁面初始化 避免不同瀏覽器 不同的設定 導致的邊框留白*/
+    margin: 0;
+}
+header{
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+/* --------------------桌機版------------------ */
+header{
+    width: 100%;
+    /* padding:用於圖片使圖片高度出來  */
+    padding: 80px 0;
+    background-image: url('http://picsum.photos/id/1033/1200/1000');
+    /* 置中 */
+    background-size: cover;
+
+    color: white;
+    text-align: center;
+    text-shadow: 0px 5px 5px rgba(0,0,0,0.5);
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.col {
+    border: 1px solid black;
+    flex-basis: calc(100% / 3);
+}
+
+/* --------------------手機版------------------ */
+@media(min-width:576px){
+
+    .row {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 80vh;
+    }
+
+    .col {
+        /* flex-basis: 100vh; */
+        width: calc(100% / 3); 
+        /* flex-basis: 100%; */
+        /* margin: 10px; */
+        /* width: 100%; */
+        /* margin-bottom: 10px; */
+        /* width: 100%; */
+    }
+
+    h1 {
+        color: green;
+    }
+}
+/* --------------------平板版------------------ */
+@media (min-width:577px) and (max-width:991px) {
+    h1 {
+        color: blue;
+    }
+}
+.col {
+    flex-basis: 50%;
+}
+/* -------------------------------------------- */
+
+
