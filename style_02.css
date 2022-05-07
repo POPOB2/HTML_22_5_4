@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+h1{
+    color: aquamarine; /*桌機*/
+}
+.header{
+    font-size: 60px;
+    color:white;
+    text-align: center;
+    background-image: url(./img/alishan-2136879_960_720.jpg);
+    text-shadow: 3px 2px black;
+    background-size: cover;/*圖片尺寸排列:置中*/
+    background-attachment: fixed;/*固定圖片作為背景  不跟著前景的進度條移動*/
+    padding: 200px 0;/*區塊內距值提高  圖片便顯示更多*/
+}
+.header>p{
+    font-size: 30px;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.col{
+    font-size: 15px;
+    border: 2px solid teal;
+    box-shadow: 5 5 5 rgba(0, 0, 0, 0.5);
+    width: 580px;
+    height: 400px;
+    margin: 10px;
+}
+.col>h3{
+    border-left: 10px solid royalblue;
+    padding-left: 5px ;
+    margin: -10px ;
+}
+
+.col>img{
+    width: 80%;
+    margin: 15px ;
+}

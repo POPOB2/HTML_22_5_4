@@ -34,8 +34,6 @@ h1{
 }
 
 .col {
-    
-
     border: 3px solid lightblue;
     /* flex-basis: calc(100% / 3); */
     width: 500px;
